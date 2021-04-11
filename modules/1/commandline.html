@@ -1,0 +1,625 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Command line - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="Let’s see some useful commands in the commandline in Ubuntu, which will be useful to navigate the filesystem in the computer of a robot or in a server in the cloud. Please refer for complete information to (Cooper, 2014).">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="Command line">
+<meta property="og:url" content="/modules/1/commandline.html">
+
+
+  <meta property="og:description" content="Let’s see some useful commands in the commandline in Ubuntu, which will be useful to navigate the filesystem in the computer of a robot or in a server in the cloud. Please refer for complete information to (Cooper, 2014).">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-11T23:57:13+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/1/commandline.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Linux</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/linux.html">Linux</a></li>
+          
+            <li><a href="/modules/1/installation.html">Installation</a></li>
+          
+            <li><a href="/modules/1/commandline.html" class="active">Commandline</a></li>
+          
+            <li><a href="/modules/1/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - ROS configuration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/ros.html">Getting started with ROS</a></li>
+          
+            <li><a href="/modules/2/ros-installation.html">ROS installation</a></li>
+          
+            <li><a href="/modules/2/ros-development.html">ROS packages</a></li>
+          
+            <li><a href="/modules/2/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Version control systems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/version-control-systems.html">Version control systems</a></li>
+          
+            <li><a href="/modules/3/git.html">Git</a></li>
+          
+            <li><a href="/modules/3/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 4 - Building tools</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/4/build-tool.html">Building systems</a></li>
+          
+            <li><a href="/modules/4/colcon.html">Colcon</a></li>
+          
+            <li><a href="/modules/4/fix.html">Custom ROS packages fix</a></li>
+          
+            <li><a href="/modules/4/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/5/waveshare.html">Simulator with Waveshare Jetbot</a></li>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Command line">
+    <meta itemprop="description" content="Let’s see some useful commands in the commandline in Ubuntu, which will be useful to navigate the filesystem in the computer of a robot or in a server in the cloud. Please refer for complete information to (Cooper, 2014).">
+    <meta itemprop="datePublished" content="2021-04-11T23:57:13+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Command line
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Let’s see some useful commands in the commandline in Ubuntu, which will be useful to navigate the filesystem in the computer of a robot or in a server in the cloud. Please refer for complete information to <a class="citation" href="#cooper2014advanced">(Cooper, 2014)</a>.</p>
+
+<p>Open a new <code class="language-plaintext highlighter-rouge">Terminal</code> from the list of applications.</p>
+
+<p><img src="/img/terminal.png" alt="Open Terminal" /></p>
+
+<p>A new window will appear with a “prompt”, which is from the “shell”, a program that interprets the commands written and runs programs corresponding to each command. The text will be the following</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~$
+</code></pre></div></div>
+
+<p>The main information included in that line is as follows <code class="language-plaintext highlighter-rouge">username@hostname:current_directory</code>.</p>
+
+<h2 id="navigate-files">Navigate files</h2>
+
+<p>Any OS provides a file system for information storage and retrieval. A typical structure is depicted in the following figure.</p>
+
+<p><a title="Ppgardne / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:Standard-unix-filesystem-hierarchy.svg"><img width="512" alt="Standard-unix-filesystem-hierarchy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Standard-unix-filesystem-hierarchy.svg/512px-Standard-unix-filesystem-hierarchy.svg.png" /></a></p>
+
+<p>The filesystem is a tree, where the root is denoted by <code class="language-plaintext highlighter-rouge">/</code>. There are two ways to access to files:</p>
+<ul>
+  <li><strong>absolute path</strong>, which is defined specifying the location of a file starting from the root.</li>
+  <li><strong>relative path</strong>, which is defined specifying the location from the current folder.
+The concept of absolute and relative path is important as it applies to all commands below.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">ls</code> (list) is a command to display the content of a folder. It can take as argument a path to a folder.</p>
+
+<p>For example, the following command will display the content of the current location (relative path):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~$ ls ./
+Desktop    Downloads         Music     Public     Videos
+Documents  examples.desktop  Pictures  Templates
+</code></pre></div></div>
+
+<p>Typing <code class="language-plaintext highlighter-rouge">pwd</code> (print working directory) will display the current working directory.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~$ pwd
+/home/class
+</code></pre></div></div>
+
+<p>The following command will display the content of the current location (absolute path):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~$ ls /home/class
+Desktop    Downloads         Music     Public     Videos
+Documents  examples.desktop  Pictures  Templates
+</code></pre></div></div>
+
+<p>Some files are hidden and can be displayed by using the option <code class="language-plaintext highlighter-rouge">-a</code>, i.e.,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~$ ls -a
+.   .bash_history  .bashrc  .config  Documents  examples.desktop  .ICEauthority  .mozilla  .npm      .profile  .ssh                       Templates
+..  .bash_logout   .cache   Desktop  Downloads  .gnupg            .local         Music     Pictures  Public    .sudo_as_admin_successful  Videos
+class@ubuntu:~$
+</code></pre></div></div>
+
+<p>Of particular importance is the file <code class="language-plaintext highlighter-rouge">.bashrc</code>, which is a script that is run every time a terminal (bash) is started – we will see it in the ROS installation.</p>
+
+<p>Note that there are a few special characters indicating specific directories:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">~</code> is used to identify the home directory – in the example, it is <code class="language-plaintext highlighter-rouge">/home/class</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">.</code> indicates the current directory – in the example, again it is <code class="language-plaintext highlighter-rouge">/home/class</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">..</code> indicates the parent of the current directory – in the example that would be <code class="language-plaintext highlighter-rouge">/home</code>.</li>
+</ul>
+
+<p>A number of other commands useful to modify files and directories:</p>
+
+<ul>
+  <li>Create a directory with <code class="language-plaintext highlighter-rouge">mkdir</code> (make directory): <code class="language-plaintext highlighter-rouge">mkdir [option] dir_name</code>. E.g., to create a folder named <code class="language-plaintext highlighter-rouge">catkin_ws</code> in the current location:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~/$ mkdir catkin_ws
+</code></pre></div></div>
+
+<ul>
+  <li>Go to a different directory with <code class="language-plaintext highlighter-rouge">cd</code> (change directory): <code class="language-plaintext highlighter-rouge">cd path</code>. E.g., to access the folder <code class="language-plaintext highlighter-rouge">catkin_ws</code> (relative path) just created:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class@ubuntu:~$ cd catkin_ws
+    class@ubuntu:~/catkin_ws$
+</code></pre></div></div>
+
+<p>Note that typing just <code class="language-plaintext highlighter-rouge">cd</code> will return to the home directory.</p>
+
+<ul>
+  <li>
+    <p>Rename an existing directory or file with <code class="language-plaintext highlighter-rouge">mv</code> (move): <code class="language-plaintext highlighter-rouge">mv original_dir_or_file renamed_dir_or_file</code>. E.g., to rename the folder previously created <code class="language-plaintext highlighter-rouge">catkin_ws</code> to <code class="language-plaintext highlighter-rouge">ros_catkin_ws</code>
+  class@ubuntu:~/$ mv catkin_ws ros_catkin_ws</p>
+  </li>
+  <li>
+    <p>Remove files and directories with <code class="language-plaintext highlighter-rouge">rm</code> (remove):</p>
+
+    <ul>
+      <li>For a single file: <code class="language-plaintext highlighter-rouge">rm file</code></li>
+      <li>For a directory and all its content: <code class="language-plaintext highlighter-rouge">rm -r directory</code></li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy a file to a path with <code class="language-plaintext highlighter-rouge">cp</code> (copy): <code class="language-plaintext highlighter-rouge">cp file1 file2</code></p>
+  </li>
+  <li>
+    <p>Find files in <code class="language-plaintext highlighter-rouge">/home/class</code> that start with “prefix”. <code class="language-plaintext highlighter-rouge">find /home/class/ -name 'prefix*'</code></p>
+  </li>
+</ul>
+
+<p>The filesystem provides a method for assigning permissions to specific users, groups of users, and all others. For example, typing <code class="language-plaintext highlighter-rouge">ls -l</code> in the home directory shows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>drwxr-xr-x 2 class class 4096 Oct  4 11:05 Desktop
+drwxr-xr-x 2 class class 4096 Oct  4 11:05 Documents
+drwxr-xr-x 2 class class 4096 Oct  4 11:05 Downloads
+-rw-r--r-- 1 class class 8980 Oct  4 10:57 examples.desktop
+drwxr-xr-x 2 class class 4096 Oct  4 11:05 Music
+drwxr-xr-x 2 class class 4096 Oct  4 11:49 Pictures
+drwxr-xr-x 2 class class 4096 Oct  4 11:05 Public
+drwxr-xr-x 2 class class 4096 Oct  4 11:05 Templates
+drwxr-xr-x 2 class class 4096 Oct  4 11:05 Videos
+</code></pre></div></div>
+
+<p>The first letter <code class="language-plaintext highlighter-rouge">d</code> or <code class="language-plaintext highlighter-rouge">-</code> refers to whether it is a directory or a file, respectively. Then, <code class="language-plaintext highlighter-rouge">r</code> refers to reading permission, <code class="language-plaintext highlighter-rouge">w</code> writing permission, <code class="language-plaintext highlighter-rouge">x</code> execution permission, and <code class="language-plaintext highlighter-rouge">-</code> if no permission is granted. The first triplet refers to the user <code class="language-plaintext highlighter-rouge">class</code>, the second triplet to the group <code class="language-plaintext highlighter-rouge">class</code>, the last triplet to all others.</p>
+
+<p>To change permissions of files and directories, <code class="language-plaintext highlighter-rouge">chmod</code> (change mode) can be used. There are different ways to do that. The more intuitive way is by directly using the letters. For example,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod u+rwx file
+</code></pre></div></div>
+
+<p>gives the user all permissions, while</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod u-rwx file
+</code></pre></div></div>
+
+<p>removes the user all permissions.</p>
+
+<h2 id="view-and-search-in-files">View and search in files</h2>
+<p>Let’s download a file example with the command <code class="language-plaintext highlighter-rouge">wget</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~$ wget https://loremipsum.de/downloads/original.txt
+</code></pre></div></div>
+
+<p>Text files can be viewed with <code class="language-plaintext highlighter-rouge">less</code>: <code class="language-plaintext highlighter-rouge">less filepath</code>. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~$ less original.txt
+</code></pre></div></div>
+
+<p>If it is long, it will scroll off the terminal.</p>
+
+<p>which allows for scrolling over the content of the file. To exit from the view mode, press the ‘q’ character.</p>
+
+<p>To search for a pattern in a file <code class="language-plaintext highlighter-rouge">grep pattern file</code>. This can be done also recursively in a directory <code class="language-plaintext highlighter-rouge">grep -r pattern directory</code>.</p>
+
+<p>Note that <code class="language-plaintext highlighter-rouge">pattern</code> can be a word or a regular expression, which is a sequence of characters defining a search pattern. A complete tutorial is in <a class="citation" href="#goyvaerts2006regular">(Goyvaerts, 2006)</a>.</p>
+
+<h2 id="edit-files">Edit files</h2>
+<p>While we are generally used to a graphical text editor, a number of situations when working with a robot will require the use of a text editor from command line. There are a number of them available. Some of the more popular ones include <code class="language-plaintext highlighter-rouge">vim</code> and <code class="language-plaintext highlighter-rouge">emacs</code>. The one referred here is <code class="language-plaintext highlighter-rouge">nano</code>, which is not as powerful as the other two mentioned, but is pre-installed for example in Ubuntu.</p>
+
+<p><img src="/img/nano.png" alt="Nano" /></p>
+
+<p>The caret symbol ‘^’ represents the control key. For example, to exit <code class="language-plaintext highlighter-rouge">nano</code>, ctrl-X needs to be pressed.</p>
+
+<h2 id="getting-help-from-the-manual">Getting help from the manual</h2>
+
+<p><code class="language-plaintext highlighter-rouge">man</code> (manual) followed by the command for which more information is requested can be used to get its detailed syntax.</p>
+
+<p>For example, <code class="language-plaintext highlighter-rouge">man ls</code> produces</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LS(1)                            User Commands                           LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about  the FILEs (the current directory by default).
+       Sort entries alphabetically if none of -cftuvSUX nor --sort  is  speci‐
+       fied.
+
+       Mandatory  arguments  to  long  options are mandatory for short options
+       too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+
+    ... and a lot more
+</code></pre></div></div>
+
+<p>To exit the view, press the key ‘q’.</p>
+
+<h2 id="installing-packages-and-libraries">Installing packages and libraries</h2>
+
+<p>It is useful to install new software and libraries on a new system. In many instances, this is possible using the package manager available in Ubuntu, based on <code class="language-plaintext highlighter-rouge">apt</code>, which allows to install, remove, or upgrade software packages.</p>
+
+<p>In particular, the following commands are used:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sudo apt update</code> to update the list of available packages.</li>
+  <li><code class="language-plaintext highlighter-rouge">sudo apt upgrade</code> to upgrade the installed packages.</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sudo apt install &lt;package-name&gt;</code> to install a package. E.g., to install <code class="language-plaintext highlighter-rouge">htop</code>, an interactive viewer for processes.</p>
+
+    <p>sudo apt install htop</p>
+  </li>
+</ul>
+
+<p>Note that <code class="language-plaintext highlighter-rouge">sudo</code> is necessary to run a command with administrative privileges (root user).</p>
+
+<h2 id="monitoring-running-processes">Monitoring running processes</h2>
+
+<p>Any computer has executing programs running as the computer is on. They are called processes identified by a unique PID (process identifier). It is important to see the resources used, especially in a limited computational system such as the one on typical robots.</p>
+
+<p>First install the interactive viewer:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install htop
+</code></pre></div></div>
+
+<p>The interactive viewer installed above can be executed with</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>htop
+</code></pre></div></div>
+
+<p><a title="PER9000, Per Erik Strandberg / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" href="https://commons.wikimedia.org/wiki/File:Htop.png"><img width="512" alt="Htop" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Htop.png" /></a></p>
+
+<p>Some of the information which is important to keep track of in robots and in general is the CPU% and MEM% usage.</p>
+
+<p>Now that we have seen a very brief intro to Linux and the Terminal commands, <a href="/modules/1/assessment.html">let’s assess</a> these main commands before getting ready with ROS in the <a href="/modules/2/ros.html">next unit</a>.</p>
+
+<div style="font-size:8px;">
+  <h3>References</h3>
+  
+<ol class="bibliography"><li><span id="cooper2014advanced">Cooper, M. (2014). <i>Advanced bash Scripting Guide</i>. The Linux Documentation Project. [https://tldp.org/LDP/abs/html/](https://tldp.org/LDP/abs/html/)</span></li>
+<li><span id="goyvaerts2006regular">Goyvaerts, J. (2006). <i>Regular expressions: the complete tutorial</i>. Lulu Press. [http://www.princeton.edu/](http://www.princeton.edu/) mlovett/reference/Regular-Expressions.pdf</span></li></ol>
+
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-11T23:57:13+07:00">April 11, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/1/installation.html" class="pagination--pager" title="Installation process
+">Previous</a>
+    
+    
+      <a href="/modules/1/assessment.html" class="pagination--pager" title="Assessment for Module 1 - Linux
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

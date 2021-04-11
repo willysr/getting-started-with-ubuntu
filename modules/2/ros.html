@@ -1,0 +1,415 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Getting started with ROS - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="In this module, we will discover the main features provided by the Robot Operating system (ROS), which will allow us to develop robotic software and enable behaviors.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="Getting started with ROS">
+<meta property="og:url" content="/modules/2/ros.html">
+
+
+  <meta property="og:description" content="In this module, we will discover the main features provided by the Robot Operating system (ROS), which will allow us to develop robotic software and enable behaviors.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-11T23:57:13+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/2/ros.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Linux</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/linux.html">Linux</a></li>
+          
+            <li><a href="/modules/1/installation.html">Installation</a></li>
+          
+            <li><a href="/modules/1/commandline.html">Commandline</a></li>
+          
+            <li><a href="/modules/1/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - ROS configuration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/ros.html" class="active">Getting started with ROS</a></li>
+          
+            <li><a href="/modules/2/ros-installation.html">ROS installation</a></li>
+          
+            <li><a href="/modules/2/ros-development.html">ROS packages</a></li>
+          
+            <li><a href="/modules/2/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Version control systems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/version-control-systems.html">Version control systems</a></li>
+          
+            <li><a href="/modules/3/git.html">Git</a></li>
+          
+            <li><a href="/modules/3/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 4 - Building tools</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/4/build-tool.html">Building systems</a></li>
+          
+            <li><a href="/modules/4/colcon.html">Colcon</a></li>
+          
+            <li><a href="/modules/4/fix.html">Custom ROS packages fix</a></li>
+          
+            <li><a href="/modules/4/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/5/waveshare.html">Simulator with Waveshare Jetbot</a></li>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Getting started with ROS">
+    <meta itemprop="description" content="In this module, we will discover the main features provided by the Robot Operating system (ROS), which will allow us to develop robotic software and enable behaviors.">
+    <meta itemprop="datePublished" content="2021-04-11T23:57:13+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Getting started with ROS
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In this module, we will discover the main features provided by the Robot Operating system (ROS), which will allow us to develop robotic software and enable behaviors.</p>
+
+<h2 id="what-is-ros">What is ROS?</h2>
+<p>According to its page, ROS is described as follows:</p>
+
+<blockquote>
+  <p>ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers. (ROS Wiki)</p>
+</blockquote>
+
+<p>With such a framework, there are a number of benefits provided:</p>
+<ul>
+  <li>Software reuse: many of the robotic capabilities described in Course 0 are readily available in ROS, allowing new users to get started with a mobile robot.</li>
+  <li>Rapid testing in simulation and with real robots. The hardware abstraction and the standardization of message-passing between processes allow developers to seamlessly work with simulators and with real robots.</li>
+  <li>Distributed computation: processes on robots can run on different computers or in the cloud and ROS enables different processes to communicate over the network.</li>
+</ul>
+
+<p>In this module, we will just get started in setting up the development environment. This is also important to know so that new robots are configured properly.</p>
+
+<p>Let’s dive into the steps of installing a ROS on Ubuntu in the <a href="/modules/2/ros-installation.html">next unit</a> – if you already have a machine with ROS you can skip it and jump to the <a href="/modules/2/ros-development.html">following unit</a>.</p>
+
+<div style="font-size:8px;">
+  <h3>References</h3>
+  
+<ol class="bibliography"></ol>
+
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-11T23:57:13+07:00">April 11, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/1/assessment.html" class="pagination--pager" title="Assessment for Module 1 - Linux
+">Previous</a>
+    
+    
+      <a href="/modules/2/ros-installation.html" class="pagination--pager" title="ROS installation
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

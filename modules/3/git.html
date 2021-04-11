@@ -1,0 +1,452 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Git - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="In this unit, our objective is to set up a ROS package from git. If git is not installed in your Ubuntu system, run in the terminal">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="/modules/3/git.html">
+
+
+  <meta property="og:description" content="In this unit, our objective is to set up a ROS package from git. If git is not installed in your Ubuntu system, run in the terminal">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-11T23:57:13+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/3/git.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Linux</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/linux.html">Linux</a></li>
+          
+            <li><a href="/modules/1/installation.html">Installation</a></li>
+          
+            <li><a href="/modules/1/commandline.html">Commandline</a></li>
+          
+            <li><a href="/modules/1/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - ROS configuration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/ros.html">Getting started with ROS</a></li>
+          
+            <li><a href="/modules/2/ros-installation.html">ROS installation</a></li>
+          
+            <li><a href="/modules/2/ros-development.html">ROS packages</a></li>
+          
+            <li><a href="/modules/2/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Version control systems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/version-control-systems.html">Version control systems</a></li>
+          
+            <li><a href="/modules/3/git.html" class="active">Git</a></li>
+          
+            <li><a href="/modules/3/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 4 - Building tools</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/4/build-tool.html">Building systems</a></li>
+          
+            <li><a href="/modules/4/colcon.html">Colcon</a></li>
+          
+            <li><a href="/modules/4/fix.html">Custom ROS packages fix</a></li>
+          
+            <li><a href="/modules/4/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/5/waveshare.html">Simulator with Waveshare Jetbot</a></li>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Git">
+    <meta itemprop="description" content="In this unit, our objective is to set up a ROS package from git. If git is not installed in your Ubuntu system, run in the terminal">
+    <meta itemprop="datePublished" content="2021-04-11T23:57:13+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Git
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In this unit, our objective is to set up a ROS package from git. If <code class="language-plaintext highlighter-rouge">git</code> is not installed in your Ubuntu system, run in the terminal</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install git
+</code></pre></div></div>
+
+<p>Git is a <strong>free and open source</strong> version control system. Many companies provide servers running such a version control system. GitHub is of the many companies that provide git management services and has shown a high popularity among developers – a 2020 survey from StackOverflow shows that 82.8% of respondents (in total 52,883 responses) uses GitHub <a class="citation" href="#stackoverflow_survey">(Stack Overflow, 2020)</a>.</p>
+
+<h2 id="get-a-package-from-an-existing-repository">Get a package from an existing repository</h2>
+
+<p>We have seen in the previous module how to find existing packages and install them. That is the preferred option. Sometimes it is necessary to modify the code of a package or the package is not available in the repository, as for example <code class="language-plaintext highlighter-rouge">turtlebot_simulator</code> as shown in the screenshot of the related page below.</p>
+
+<p><img src="/img/turtlebot-simulator.png" alt="turtlebot_simulator" /></p>
+
+<p>To get a ROS package on GitHub, the typical steps are (figures refer to <code class="language-plaintext highlighter-rouge">turtlebot_simulator</code>):</p>
+<ul>
+  <li>First, check the corresponding existence of the package on GitHub (or other repositories) and checkout.</li>
+</ul>
+
+<p><img src="/img/turtlebot-simulator-git.png" alt="turtlebot_simulator on GitHub" /></p>
+
+<ul>
+  <li>Second, change the branch as necessary. Different branches might be available, typically marking versions of the code that work with different versions of ROS.</li>
+</ul>
+
+<p><img src="/img/turtlebot-simulator-branches.png" alt="turtlebot_simulator on GitHub" /></p>
+
+<ul>
+  <li>Third, compile.</li>
+</ul>
+
+<p>In the following, an example for the package <code class="language-plaintext highlighter-rouge">turtlebot_simulator</code>, assuming the folders <code class="language-plaintext highlighter-rouge">~/ros_workspace/src/</code> are existing.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/ros_workspace/src/ # going to the `src` directory, containing custom ROS packages.
+git clone https://github.com/ros/turtlebot_simulator # clone a repository.
+cd turtlebot_simulator # access the downloaded ROS package.
+git checkout melodic # change branch as necessary, e.g., to point to the correct version of ROS
+</code></pre></div></div>
+
+<p>If we wanted to apply changes, then it makes sense to fork the public repository so that changes can be applied and tracked. If improvements are provided, then such changes can be contributing back to the project through a pull request. More information <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow">here</a>.</p>
+
+<h2 id="create-a-new-repository">Create a new repository</h2>
+
+<p>It is possible also to create a new GitHub repository, to keep track of the code. The set of instructions to set it up online, is at the <a href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo">following link</a>.</p>
+
+<p>Once created, follow the same commands above for cloning the repository. A usual workflow for software development includes the following steps (run within the package):</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">git pull</code>: fetch the current copy from the remote repository to ensure up-to-date local copy.</li>
+  <li>Modify the local copy, e.g., adding, modifying, or removing files.</li>
+  <li><code class="language-plaintext highlighter-rouge">git add &lt;directory or files&gt;</code>: stage all changes of specified <code class="language-plaintext highlighter-rouge">&lt;directory or files&gt;</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">git commit -m &lt;meaningful message&gt;</code>: to commit the staged snapshot and include a message to identify the modification done.</li>
+  <li><code class="language-plaintext highlighter-rouge">git push</code>: push the changes to the remote repository.</li>
+</ol>
+
+<p>There are cheatsheets available, for example <a href="https://education.github.com/git-cheat-sheet-education.pdf">directly from GitHub</a>.</p>
+
+<p>Before discovering what the main files are in a package (next module), <a href="/modules/3/assessment.html">let’s assess</a> the understanding of <code class="language-plaintext highlighter-rouge">git</code>.</p>
+
+<div style="font-size:8px;">
+  <h3>References</h3>
+  
+<ol class="bibliography"><li><span id="stackoverflow_survey">Stack Overflow. (2020). <i>2020 Developer Survey</i>. [https://insights.stackoverflow.com/survey/2020#technology-collaboration-tools](https://insights.stackoverflow.com/survey/2020#technology-collaboration-tools)</span></li></ol>
+
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-11T23:57:13+07:00">April 11, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/3/version-control-systems.html" class="pagination--pager" title="Version Control systems
+">Previous</a>
+    
+    
+      <a href="/modules/3/assessment.html" class="pagination--pager" title="Assessment for Module 3 - Version control systems
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

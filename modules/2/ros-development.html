@@ -1,0 +1,472 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>ROS development - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="ROS software is organized in packages (ROS, 2020), each containing collection of files, including configuration files, executables, source code, etc. Each package is typically logically organized to provide specific functionalities to robots. For example, there is a package for Simultaneous Localization and Mapping, called ‘gmapping’.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="ROS development">
+<meta property="og:url" content="/modules/2/ros-development.html">
+
+
+  <meta property="og:description" content="ROS software is organized in packages (ROS, 2020), each containing collection of files, including configuration files, executables, source code, etc. Each package is typically logically organized to provide specific functionalities to robots. For example, there is a package for Simultaneous Localization and Mapping, called ‘gmapping’.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-11T23:57:13+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/2/ros-development.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Linux</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/linux.html">Linux</a></li>
+          
+            <li><a href="/modules/1/installation.html">Installation</a></li>
+          
+            <li><a href="/modules/1/commandline.html">Commandline</a></li>
+          
+            <li><a href="/modules/1/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - ROS configuration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/ros.html">Getting started with ROS</a></li>
+          
+            <li><a href="/modules/2/ros-installation.html">ROS installation</a></li>
+          
+            <li><a href="/modules/2/ros-development.html" class="active">ROS packages</a></li>
+          
+            <li><a href="/modules/2/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Version control systems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/version-control-systems.html">Version control systems</a></li>
+          
+            <li><a href="/modules/3/git.html">Git</a></li>
+          
+            <li><a href="/modules/3/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 4 - Building tools</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/4/build-tool.html">Building systems</a></li>
+          
+            <li><a href="/modules/4/colcon.html">Colcon</a></li>
+          
+            <li><a href="/modules/4/fix.html">Custom ROS packages fix</a></li>
+          
+            <li><a href="/modules/4/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/5/waveshare.html">Simulator with Waveshare Jetbot</a></li>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="ROS development">
+    <meta itemprop="description" content="ROS software is organized in packages (ROS, 2020), each containing collection of files, including configuration files, executables, source code, etc.Each package is typically logically organized to provide specific functionalities to robots. For example, there is a package for Simultaneous Localization and Mapping, called ‘gmapping’.">
+    <meta itemprop="datePublished" content="2021-04-11T23:57:13+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">ROS development
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>ROS software is organized in <strong>packages</strong> <a class="citation" href="#ros-packages">(ROS, 2020)</a>, each containing collection of files, including configuration files, executables, source code, etc.
+Each package is typically logically organized to provide specific functionalities to robots. For example, there is a package for Simultaneous Localization and Mapping, called ‘gmapping’.</p>
+
+<p>A specific command to check what packages are currently installed is</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~$ rospack list
+
+actionlib /opt/ros/melodic/share/actionlib
+actionlib_msgs /opt/ros/melodic/share/actionlib_msgs
+actionlib_tutorials /opt/ros/melodic/share/actionlib_tutorials
+angles /opt/ros/melodic/share/angles
+bond /opt/ros/melodic/share/bond
+bondcpp /opt/ros/melodic/share/bondcpp
+bondpy /opt/ros/melodic/share/bondpy
+camera_calibration /opt/ros/melodic/share/camera_calibration
+camera_calibration_parsers /opt/ros/melodic/share/camera_calibration_parsers
+camera_info_manager /opt/ros/melodic/share/camera_info_manager
+catkin /opt/ros/melodic/share/catkin
+class_loader /opt/ros/melodic/share/class_loader
+cmake_modules /opt/ros/melodic/share/cmake_modules
+compressed_depth_image_transport /opt/ros/melodic/share/compressed_depth_image_transport
+compressed_image_transport /opt/ros/melodic/share/compressed_image_transport
+control_msgs /opt/ros/melodic/share/control_msgs
+control_toolbox /opt/ros/melodic/share/control_toolbox
+controller_interface /opt/ros/melodic/share/controller_interface
+controller_manager /opt/ros/melodic/share/controller_manager
+controller_manager_msgs /opt/ros/melodic/share/controller_manager_msgs
+cpp_common /opt/ros/melodic/share/cpp_common
+cv_bridge /opt/ros/melodic/share/cv_bridge
+
+... and many more ...
+</code></pre></div></div>
+
+<p>All the packages installed with the <code class="language-plaintext highlighter-rouge">apt</code> command are in <code class="language-plaintext highlighter-rouge">/opt/ros/melodic/share</code> by default.</p>
+
+<p>Let’s install some packages to test the ROS installation and see a simulation of a robot in Gazebo, a 3D robotic simulator. In particular, we will get the packages containing the 3D models of a robot called Turtlebot 3 <a class="citation" href="#ros-turtlebot">(ROS, 2020)</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install ros-melodic-turtlebot3-gazebo ros-melodic-turtlebot3-description
+</code></pre></div></div>
+
+<p>Note that <code class="language-plaintext highlighter-rouge">sudo</code> is necessary as system folders are modified with the installation through <code class="language-plaintext highlighter-rouge">apt</code>.</p>
+
+<p>We can run it by typing the following commands</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SVGA_VGPU10=0 # Only necessary within the Virtual Machine to reduce the GPU instructions and save resources.
+export TURTLEBOT3_MODEL=burger # Specify the model of the robot.
+roslaunch turtlebot3_gazebo turtlebot3_world.launch # Run the simulation.
+</code></pre></div></div>
+
+<p>After the last command is run, the terminal will display text and the 3D simulator will appear, as in the following.</p>
+
+<p><img src="/img/gazebo-turtlebot3.png" alt="Turtlebot 3 robot in Gazebo" /></p>
+
+<p>In some cases, when trying to run specific executables an error can appear about package which is not found. For example,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Resource not found: turtlebot3_description
+ROS path [0]=/opt/ros/melodic/share/ros
+ROS path [1]=/opt/ros/melodic/share
+The traceback for the exception was written to the log file
+</code></pre></div></div>
+
+<p>“Resource not found” indicates that a package is not found in the paths listed in the environment variable <code class="language-plaintext highlighter-rouge">$ROS_PACKAGE_PATH</code>. In this specific example <code class="language-plaintext highlighter-rouge">turtlebot3_description</code> is missing. 
+To solve such an issue, the easiest solution is to install the missing package, when it is available. Given the specified missing resource, it is easy to use <code class="language-plaintext highlighter-rouge">apt</code> and install the missing package: replace ‘_’ with ‘-‘ and add as prefix <code class="language-plaintext highlighter-rouge">ros-&lt;version&gt;</code>. In the case of Ubuntu 18.04, it is <code class="language-plaintext highlighter-rouge">ros-melodic</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install ros-melodic-turtlebot3-description
+</code></pre></div></div>
+
+<p>As of now, we have seen packages that are already existing. What if we want to create a new package? Typically, a workspace is created to contain such custom packages:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p ~/ros_workspace/src
+</code></pre></div></div>
+
+<p>(<code class="language-plaintext highlighter-rouge">-p</code> creates both directories <code class="language-plaintext highlighter-rouge">ros_workspace</code> and <code class="language-plaintext highlighter-rouge">src</code>).</p>
+
+<p>We will discover the exciting world of ROS in the next course. For now, we are continuing in our journey on how to set up the development environment. Before moving forward, <a href="/modules/2/assessment.html">let’s assess</a> your understanding of the ROS configuration.</p>
+
+<div style="font-size:8px;">
+  <h3>References</h3>
+  
+<ol class="bibliography"><li><span id="ros-packages">ROS. (2020). <i>Packages</i>. [http://wiki.ros.org/Packages](http://wiki.ros.org/Packages)</span></li>
+<li><span id="ros-turtlebot">ROS. (2020). <i>turtlebot_simulator</i>. [http://wiki.ros.org/turtlebot_simulator](http://wiki.ros.org/turtlebot_simulator)</span></li></ol>
+
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-11T23:57:13+07:00">April 11, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/2/ros-installation.html" class="pagination--pager" title="ROS installation
+">Previous</a>
+    
+    
+      <a href="/modules/2/assessment.html" class="pagination--pager" title="Assessment for Module 2 - ROS configuration and structure
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

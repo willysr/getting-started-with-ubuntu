@@ -1,0 +1,450 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>ROS installation - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="There are multiple versions of ROS depending on the Ubuntu version. There are different ways to install ROS, including compiling the source code or using Docker – a lightweight virtual machine.  In general, unless there are specific features necessary that are included only in short term support version of ROS and Ubuntu, it is good to stick to the long-term support ones. In this way, libraries will be more stable.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="ROS installation">
+<meta property="og:url" content="/modules/2/ros-installation.html">
+
+
+  <meta property="og:description" content="There are multiple versions of ROS depending on the Ubuntu version. There are different ways to install ROS, including compiling the source code or using Docker – a lightweight virtual machine.  In general, unless there are specific features necessary that are included only in short term support version of ROS and Ubuntu, it is good to stick to the long-term support ones. In this way, libraries will be more stable.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-11T23:57:13+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/2/ros-installation.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Linux</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/linux.html">Linux</a></li>
+          
+            <li><a href="/modules/1/installation.html">Installation</a></li>
+          
+            <li><a href="/modules/1/commandline.html">Commandline</a></li>
+          
+            <li><a href="/modules/1/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - ROS configuration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/ros.html">Getting started with ROS</a></li>
+          
+            <li><a href="/modules/2/ros-installation.html" class="active">ROS installation</a></li>
+          
+            <li><a href="/modules/2/ros-development.html">ROS packages</a></li>
+          
+            <li><a href="/modules/2/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Version control systems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/version-control-systems.html">Version control systems</a></li>
+          
+            <li><a href="/modules/3/git.html">Git</a></li>
+          
+            <li><a href="/modules/3/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 4 - Building tools</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/4/build-tool.html">Building systems</a></li>
+          
+            <li><a href="/modules/4/colcon.html">Colcon</a></li>
+          
+            <li><a href="/modules/4/fix.html">Custom ROS packages fix</a></li>
+          
+            <li><a href="/modules/4/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/5/waveshare.html">Simulator with Waveshare Jetbot</a></li>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="ROS installation">
+    <meta itemprop="description" content="There are multiple versions of ROS depending on the Ubuntu version.There are different ways to install ROS, including compiling the source code or using Docker – a lightweight virtual machine. In general, unless there are specific features necessary that are included only in short term support version of ROS and Ubuntu, it is good to stick to the long-term support ones. In this way, libraries will be more stable.">
+    <meta itemprop="datePublished" content="2021-04-11T23:57:13+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">ROS installation
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>There are multiple versions of ROS depending on the Ubuntu version.
+There are different ways to install ROS, including compiling the source code or using Docker – a lightweight virtual machine. 
+In general, unless there are specific features necessary that are included only in short term support version of ROS and Ubuntu, it is good to stick to the long-term support ones. In this way, libraries will be more stable.</p>
+
+<p>For our purpose, we will install ROS melodic for Ubuntu 18.04 and configure the virtual machine set up in the previous module. This will allow us to get familiar with the installation process and the steps to configure the environment. The installation process is relatively straightforward <a class="citation" href="#rosinstall">(ROS, 2020)</a> – here the main highlights.</p>
+
+<h2 id="adding-the-ros-repository">Adding the ROS repository</h2>
+
+<p>We have discussed the package manager present in Ubuntu. We rely to that for our installation. In particular:</p>
+<ol>
+  <li>the repository where <code class="language-plaintext highlighter-rouge">apt</code> needs to know where to find the packages needs to be setup.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" &gt; /etc/apt/sources.list.d/ros-latest.list'
+</code></pre></div>    </div>
+  </li>
+  <li>to authenticate the packages a key needs to be added:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+</code></pre></div>    </div>
+    <h2 id="installation-and-configuration">Installation and configuration</h2>
+  </li>
+</ol>
+
+<p>As we added a new repository, it is important to update the list of packages with the command</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+</code></pre></div></div>
+
+<p>Finally, the installation can proceed using a meta package that will include the core part of ROS and the most common ROS packages:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install ros-melodic-desktop-full python-rosdep
+sudo rosdep init
+rosdep update
+</code></pre></div></div>
+
+<p>Once the installation is done – it will take some time – the environment can be configured so that all ROS commands are available on the Terminal. In particular:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "source /opt/ros/melodic/setup.bash" &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre></div></div>
+
+<p>This command, which needs to be run only once, will set the environment variables automatically every time a new Terminal is open. The new environment variables added can be checked with the command in the Terminal</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class@ubuntu:~$ env | grep ROS
+
+ROS_ETC_DIR=/opt/ros/melodic/etc/ros
+ROS_ROOT=/opt/ros/melodic/share/ros
+ROS_MASTER_URI=http://localhost:11311
+ROS_VERSION=1
+ROS_PYTHON_VERSION=2
+ROS_PACKAGE_PATH=/opt/ros/melodic/share
+ROSLISP_PACKAGE_DIRECTORIES=
+ROS_DISTRO=melodic
+</code></pre></div></div>
+
+<p>Now that we have a working ROS system, we can dive into setting up the development environment, covered in the <a href="/modules/2/ros-development.html">next unit</a>.</p>
+
+<div style="font-size:8px;">
+  <h3>References</h3>
+  
+<ol class="bibliography"><li><span id="rosinstall">ROS. (2020). <i>ROS Installation</i>. [http://wiki.ros.org/ROS/Installation](http://wiki.ros.org/ROS/Installation)</span></li></ol>
+
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-11T23:57:13+07:00">April 11, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/2/ros.html" class="pagination--pager" title="Getting started with ROS
+">Previous</a>
+    
+    
+      <a href="/modules/2/ros-development.html" class="pagination--pager" title="ROS development
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

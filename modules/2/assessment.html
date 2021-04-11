@@ -1,0 +1,477 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Assessment for Module 2 - ROS configuration and structure - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="ROS configuration and structure This assignment is to help you self-assess your comprehension on ROS. Read carefully each question. Once answered, you will receive feedback. Good luck!    Q1 The command source /opt/ros/melodic/setup.bash is for        1. will set the environment variables so that all ROS commands are available at command line.    2. will install ROS.    3. will add the ROS repository for the apt command.    4. the file does not exist.    Show Answer    Q2 A ROS package is        1. a directory containing files, including configuration files, executables, source code, etc, typically organized to provide specific robot functionalities.    2. a zip file.    3. a part of the robot hardware.    4. provides only the functionality of Simultaneous Localization and Mapping.    Show Answer    Q3 The ROS packages are searched within        1. the directories listed in ROS_PACKAGE_PATH    2. in /opt/ros/melodic/    3. ~/ros_workspace/src/    4. /opt/ros/melodic/share    Show Answer    Q4 To install the package ‘gmapping’ in ROS melodic through apt, the full command to be typed on the terminal is      Possible answers:             sudo apt install ros-melodic-gmapping         Show Answer    Q5 Some of the ROS benefits include (select all that apply)   * Software Reuse* Rapid testing* Distributed computation* it is a simple programming language.* it is an integrated development environment (IDE) Show Answer">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="Assessment for Module 2 - ROS configuration and structure">
+<meta property="og:url" content="/modules/2/assessment.html">
+
+
+  <meta property="og:description" content="ROS configuration and structure This assignment is to help you self-assess your comprehension on ROS. Read carefully each question. Once answered, you will receive feedback. Good luck!    Q1 The command source /opt/ros/melodic/setup.bash is for        1. will set the environment variables so that all ROS commands are available at command line.    2. will install ROS.    3. will add the ROS repository for the apt command.    4. the file does not exist.    Show Answer    Q2 A ROS package is        1. a directory containing files, including configuration files, executables, source code, etc, typically organized to provide specific robot functionalities.    2. a zip file.    3. a part of the robot hardware.    4. provides only the functionality of Simultaneous Localization and Mapping.    Show Answer    Q3 The ROS packages are searched within        1. the directories listed in ROS_PACKAGE_PATH    2. in /opt/ros/melodic/    3. ~/ros_workspace/src/    4. /opt/ros/melodic/share    Show Answer    Q4 To install the package ‘gmapping’ in ROS melodic through apt, the full command to be typed on the terminal is      Possible answers:             sudo apt install ros-melodic-gmapping         Show Answer    Q5 Some of the ROS benefits include (select all that apply)   * Software Reuse* Rapid testing* Distributed computation* it is a simple programming language.* it is an integrated development environment (IDE) Show Answer">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-11T23:57:13+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/2/assessment.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Linux</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/linux.html">Linux</a></li>
+          
+            <li><a href="/modules/1/installation.html">Installation</a></li>
+          
+            <li><a href="/modules/1/commandline.html">Commandline</a></li>
+          
+            <li><a href="/modules/1/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - ROS configuration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/ros.html">Getting started with ROS</a></li>
+          
+            <li><a href="/modules/2/ros-installation.html">ROS installation</a></li>
+          
+            <li><a href="/modules/2/ros-development.html">ROS packages</a></li>
+          
+            <li><a href="/modules/2/assessment.html" class="active">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Version control systems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/version-control-systems.html">Version control systems</a></li>
+          
+            <li><a href="/modules/3/git.html">Git</a></li>
+          
+            <li><a href="/modules/3/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 4 - Building tools</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/4/build-tool.html">Building systems</a></li>
+          
+            <li><a href="/modules/4/colcon.html">Colcon</a></li>
+          
+            <li><a href="/modules/4/fix.html">Custom ROS packages fix</a></li>
+          
+            <li><a href="/modules/4/assessment.html">Assessment</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/5/waveshare.html">Simulator with Waveshare Jetbot</a></li>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Assessment for Module 2 - ROS configuration and structure">
+    <meta itemprop="description" content="ROS configuration and structureThis assignment is to help you self-assess your comprehension on ROS. Read carefully each question. Once answered, you will receive feedback. Good luck!Q1 The command source /opt/ros/melodic/setup.bash is for  1. will set the environment variables so that all ROS commands are available at command line.  2. will install ROS.  3. will add the ROS repository for the apt command.  4. the file does not exist.Show AnswerQ2 A ROS package is  1. a directory containing files, including configuration files, executables, source code, etc, typically organized to provide specific robot functionalities.  2. a zip file.  3. a part of the robot hardware.  4. provides only the functionality of Simultaneous Localization and Mapping.Show AnswerQ3 The ROS packages are searched within  1. the directories listed in ROS_PACKAGE_PATH  2. in /opt/ros/melodic/  3. ~/ros_workspace/src/  4. /opt/ros/melodic/shareShow AnswerQ4 To install the package ‘gmapping’ in ROS melodic through apt, the full command to be typed on the terminal is  Possible answers:          sudo apt install ros-melodic-gmapping     Show AnswerQ5 Some of the ROS benefits include (select all that apply)* Software Reuse* Rapid testing* Distributed computation* it is a simple programming language.* it is an integrated development environment (IDE)Show Answer">
+    <meta itemprop="datePublished" content="2021-04-11T23:57:13+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Assessment for Module 2 - ROS configuration and structure
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        
+<h2>ROS configuration and structure</h2>
+<p><p>This assignment is to help you self-assess your comprehension on <strong>ROS</strong>. Read carefully each question. Once answered, you will receive feedback. Good luck!</p>
+</p>
+<hr />
+
+<p style="font-weight: 550;">Q1 <p>The command <code class="language-plaintext highlighter-rouge">source /opt/ros/melodic/setup.bash</code> is for</p>
+</p>
+
+<div class="admonition question">
+<p>
+
+  <span class="correct-1">1. will set the environment variables so that all ROS commands are available at command line.</span><br />
+
+  2. will install ROS.<br />
+
+  3. will add the ROS repository for the apt command.<br />
+
+  4. the file does not exist.<br />
+
+</p>
+</div>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-1&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-1&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Show Answer</button></p>
+
+<hr />
+
+<p style="font-weight: 550;">Q2 <p>A ROS package is</p>
+</p>
+
+<div class="admonition question">
+<p>
+
+  <span class="correct-2">1. a directory containing files, including configuration files, executables, source code, etc, typically organized to provide specific robot functionalities.</span><br />
+
+  2. a zip file.<br />
+
+  3. a part of the robot hardware.<br />
+
+  4. provides only the functionality of Simultaneous Localization and Mapping.<br />
+
+</p>
+</div>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-2&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-2&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Show Answer</button></p>
+
+<hr />
+
+<p style="font-weight: 550;">Q3 <p>The ROS packages are searched within</p>
+</p>
+
+<div class="admonition question">
+<p>
+
+  <span class="correct-3">1. the directories listed in ROS_PACKAGE_PATH</span><br />
+
+  2. in /opt/ros/melodic/<br />
+
+  3. ~/ros_workspace/src/<br />
+
+  4. /opt/ros/melodic/share<br />
+
+</p>
+</div>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-3&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-3&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Show Answer</button></p>
+
+<hr />
+
+<p style="font-weight: 550;">Q4 <p>To install the package ‘gmapping’ in ROS melodic through apt, the full command to be typed on the terminal is</p>
+</p>
+
+<div class="correct-4" style="font-weight: normal; display: none">
+  Possible answers:
+  <ul>
+   
+     <li>sudo apt install ros-melodic-gmapping</li>
+   
+  </ul>
+</div>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-4&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-4&quot;).css(&quot;display&quot;, &quot;block&quot;)">Show Answer</button></p>
+
+<hr />
+
+<p style="font-weight: 550;">Q5 <p>Some of the ROS benefits include (select all that apply)</p>
+</p>
+
+<p><span class="correct-5">* Software Reuse</span><br /><span class="correct-5">* Rapid testing</span><br /><span class="correct-5">* Distributed computation</span><br />* it is a simple programming language.<br />* it is an integrated development environment (IDE)<br /></p>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-5&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-5&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Show Answer</button></p>
+
+<hr />
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-11T23:57:13+07:00">April 11, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/2/ros-development.html" class="pagination--pager" title="ROS development
+">Previous</a>
+    
+    
+      <a href="/modules/3/version-control-systems.html" class="pagination--pager" title="Version Control systems
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
